@@ -1,6 +1,12 @@
 #!/bin/bash
 #SBATCH -N1 -n4 -t 2-0 --mail-type=END --mail-user=hthirima@fredhutch.org -A holland_e
 
+## This example script extracts .baf files from the source.
+## input = text file with subdirectory names in the source directory
+## base_dir = main source directory
+## dest_dir = destination directory
+
+
 # Ensure the script receives the required input arguments
 if [[ $# -ne 2 ]]; then
     echo "Usage: $0 <input_file> <base_directory>"
